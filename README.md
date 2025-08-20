@@ -1,5 +1,7 @@
 ## EX. NO: 1 : IMPLEMENTATION OF CAESAR CIPHER
- 
+
+## NAME: SOMESHWAR S
+## REG NO: 212224040322
 
 ## AIM:
 
@@ -28,7 +30,32 @@ becomes C. To change a message back, each letter is replaced by the one three be
 
 
 PROGRAM :-
-
+```
+#include <stdio.h>
+#include <string.h>
+void caesarCipher(char *text, int shift) 
+{
+    for (int i = 0; text[i]; i++) 
+    {
+        if (text[i] >= 'A' && text[i] <= 'Z')
+        text[i] = ((text[i]- 'A' + shift) % 26) + 'A';
+        
+    }
+ }
+int main() 
+{
+    char text[] = "SOMESHWAR S";
+    caesarCipher(text, 3);
+    printf("Encrypted Message: %s\n", text);
+    caesarCipher(text,-3);
+    printf("Decrypted Message: %s\n", text);
+    return 0;
+    
+}
+```
 
 
 OUTPUT :-
+
+<img width="1337" height="710" alt="image" src="https://github.com/user-attachments/assets/e0572e24-d9b0-4ba0-9680-0adc18afb9ad" />
+
